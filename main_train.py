@@ -21,7 +21,7 @@ from utils import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--learning_rate',type=float,default=1e-1,help='initial learning rate')
-parser.add_argument('--drop',type=int,nargs='+',default=[81,124],help='Decrease the learning rate')
+parser.add_argument('--drop',type=int,nargs='+',default=[81,95],help='Decrease the learning rate')
 parser.add_argument('--decay',type=float,default=1e-4,help='Weight decay')
 parser.add_argument('--nepochs',type=int,default=100,help='training epoch')
 parser.add_argument('--batch_size',type=int,default=128,help='batch size of training')

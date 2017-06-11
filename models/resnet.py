@@ -122,8 +122,16 @@ def resnet20(num_classes=10):
     model = ResNet(residual_block,20,num_classes)
     return model
 
+def resnet26(num_classes=10):
+    model = ResNet(residual_block,26,num_classes)
+    return model
+
 def resnet32(num_classes=10):
     model = ResNet(residual_block,32,num_classes)
+    return model
+
+def resnet38(num_classes=10):
+    model = ResNet(residual_block,38,num_classes)
     return model
 
 def resnet44(num_classes=10):
