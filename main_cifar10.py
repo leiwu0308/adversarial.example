@@ -19,8 +19,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--arch',       default='resnet8',                                help='model')
 parser.add_argument('--modelpath',  default='pretrains/store/resnet8-cifar10-87.25.pkl',    help='path to load model')
 parser.add_argument('--gpuid',      default='1',                                      help='GPU ID')
+parser.add_argument('--data',       default='test',                                   help='selected dataset')
 opt = parser.parse_args()
 os.environ['CUDA_VISIBLE_DEVICES']=opt.gpuid
+print(opt)
 
 
 # -[Hyper Parameters]-
@@ -45,6 +47,16 @@ model       = models.__dict__[opt.arch]().cuda()
 model_state = torch.load(model_path)
 model.load_state_dict(model_state)
 ct    = nn.CrossEntropyLoss().cuda()
+
+if opt.data == 'train':
+    data_loader = train_loader
+    img_pool = train_set.train_data
+    img = train_img
+else:
+    data_loader = test_loader
+    img_pool = test_set.test_data
+    img = test_img
+
 #print(model)
 
 def show(img):
@@ -53,9 +65,10 @@ def show(img):
 
 
 def batch_attack(model,ct,lr,eps,niter=1):
-    adv_img = torch.zeros(10000,3,32,32)
+    nsample = img.shape[0]
+    adv_img = torch.zeros(nsample,3,32,32)
 
-    for i,(x,y) in enumerate(test_loader):
+    for i,(x,y) in enumerate(data_loader):
         if niter==1:
             lr = eps
         adv_x = attacks.gsm(model,ct,x.cuda(),y.cuda(),lr=lr,eps=eps,niter=niter)
@@ -73,8 +86,8 @@ eps_range = [0,1,2,3,4,5]
 for eps in eps_range:
     adv_img = batch_attack(model,ct,lr,eps/255.0,niter)
 
-    test_set.test_data = adv_img
-    _,acc,_ = utils.eval(model,ct,test_loader)
-    test_set.test_data = test_img
+    np.copyto(img_pool,adv_img)
+    _,acc,_ = utils.eval(model,ct,data_loader)
+    np.copyto(img_pool,img)
     print('perturbation: %d, accuracy: %.2f'%(eps,acc))
 

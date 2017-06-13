@@ -117,6 +117,7 @@ def train(model,criterion,optimizer,dataloader):
     batch_num = len(dataloader)
     return loss/batch_num,acc1/batch_num, acc5/batch_num
 
+
 #[] test performance
 def eval(model,criterion,dataloader):
     model.eval()
