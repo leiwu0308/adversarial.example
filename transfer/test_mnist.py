@@ -11,7 +11,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 import os,math,random,argparse
-os.environ['CUDA_VISIBLE_DEVICES']='0'
+os.environ['CUDA_VISIBLE_DEVICES']='1'
 
 import utils
 import models
@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--arch1',  default='linear_classifier',  help='network1')
 parser.add_argument('--arch2',  default='linear_classifier', help='network2')
 parser.add_argument('--path1',  default='../pretrains/store/linear_classifier-mnist-92.43.pkl', help='parameters of network1')
-parser.add_argument('--path2',  default='../pretrains/store/linear_classifier-mnist-92.43.', help='parameters of network2')
+parser.add_argument('--path2',  default='../pretrains/store/linear_classifier-mnist-92.39.pkl', help='parameters of network2')
 parser.add_argument('--lr', type=float, default=10,     help='step size of adversarial example generating method')
 parser.add_argument('--eps',type=float, default=10,     help='maximal allowed average perturbation')
 parser.add_argument('--niter',type=int, default=1,      help='number of iteration')
@@ -48,12 +48,12 @@ ct    = nn.CrossEntropyLoss().cuda()
 
 if opt.data == 'test':
     data_loader = test_loader
-    clean_img = train_img
+    clean_img = test_img
     img_pool = test_set.test_data
 else:
     data_loader = train_loader
-    clean_img = test_img
-    img_pool = test_set.test_data
+    clean_img = train_img
+    img_pool = train_set.train_data
 
 def batch_attack(model,ct,lr,eps,niter):
     adv_img = torch.Tensor(clean_img.size())
@@ -75,7 +75,7 @@ img_pool.copy_(adv_img)
 _,acc1,_ = utils.eval(model1,ct,data_loader)
 _,acc2,_ = utils.eval(model2,ct,data_loader)
 img_pool.copy_(clean_img)
-print('net2 accuracy: %.2f'%(acc0))
+print('net1 accuracy: %.2f'%(acc0))
 print('(1-->2) perturbation: %d, acc_net1: %.2f, acc_net2: %.2f\n'%(opt.eps,acc1,acc2))
 
 
@@ -88,4 +88,4 @@ _,acc2,_ = utils.eval(model2,ct,data_loader)
 _,acc1,_ = utils.eval(model1,ct,data_loader)
 img_pool.copy_(clean_img)
 print('net2 accuracy: %.2f'%(acc0))
-print('(2-->1) perturbation: %d, acc_net1: %.2f, acc_net2: %.2f\n'%(opt.eps,acc2,acc1))
+print('(1<--2) perturbation: %d, acc_net1: %.2f, acc_net2: %.2f\n'%(opt.eps,acc1,acc2))

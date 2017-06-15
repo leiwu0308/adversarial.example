@@ -13,6 +13,7 @@ class FNN(nn.Module):
         for i in range(self.depth):
             self.fc.append(nn.Linear(arch[i],arch[i+1]))
         self.fc = nn.ModuleList(self.fc)
+        self.name = 'fnn_depth%d_width%d'%(self.depth-1,arch[2])
 
         for m in self.modules():
             if isinstance(m,nn.Linear):
@@ -28,40 +29,9 @@ class FNN(nn.Module):
                 o = F.relu(o)
         return o
 
-    def name(self):
-        return 'fully connected nerual networks'
-
-
-def fnnMNIST_shallow(num_classes=10):
-    model = FNN([784,500,num_classes])
-    return model
-
-def fnnMNIST_wide(num_classes=10):
-    model = FNN([784,2000,num_classes])
-    return model
-
-def fnnMNIST_shallow1(num_classes=10):
-    model = FNN([784,500,300,200,200,num_classes])
-    return model
-
-def fnnMNIST_deep(num_classes=10):
-    model = FNN([784,500,300,200,200,100,num_classes])
-    return model
-
-def fnnMNIST_deepwide(num_classes=10):
-    model = FNN([784,500,500,500,500,100,num_classes])
-    return model
-
-def fnnMNIST_wider(num_classes=10):
-    model = FNN([784,4000,num_classes])
-    return model
-
-def fnnMNIST_deeper(num_classes=10):
-    model = FNN([784,500,300,200,200,200,200,200,200,200,200,100,num_classes])
-    return model
-
-def fnnMNIST_deeperwide(num_classes=10):
-    model = FNN([784,500,500,500,500,500,500,500,500,500,500,100,num_classes])
+def fnn(depth=1,width=500,num_classes=10):
+    arch = [784] + [width for x in range(depth)] + [num_classes]
+    model = FNN(arch)
     return model
 
 def fnnMNIST_deepless(num_classes=10):

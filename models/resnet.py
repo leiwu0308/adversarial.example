@@ -56,23 +56,23 @@ class residual_block(nn.Module):
         return o
 
 class ResNet(nn.Module):
-    def __init__(self,block,depth,num_classes=10,shortcutType='A'):
+    def __init__(self,block,depth,width=1,num_classes=10,shortcutType='A'):
         super(ResNet,self).__init__()
         assert (depth-2) %6 == 0 , 'depth should be 6*m + 2, like 20 32 44 56 110'
         num_blocks = (depth-2)//6
         print('resnet: depth: %d, # of blocks at each stage: %d'%(depth,num_blocks))
 
-        self.in_channels = 16
-        self.conv = conv3x3(3,16)
-        self.bn = nn.BatchNorm2d(16)
+        self.in_channels = 16 * width
+        self.conv = conv3x3(3,16 * width)
+        self.bn = nn.BatchNorm2d(16 * width)
         self.relu = nn.ReLU(inplace=True)
 
-        self.inplane = 16
-        self.stage1 = self._make_layer(block,16,num_blocks,1) # 32x32x16
-        self.stage2 = self._make_layer(block,32,num_blocks,2) # 16x16x32
-        self.stage3 = self._make_layer(block,64,num_blocks,2) # 8x8x64
+        self.inplane = 16 * width
+        self.stage1 = self._make_layer(block,16 * width,num_blocks,1) # 32x32x16
+        self.stage2 = self._make_layer(block,32 * width,num_blocks,2) # 16x16x32
+        self.stage3 = self._make_layer(block,64 * width,num_blocks,2) # 8x8x64
         self.avg_pool = nn.AvgPool2d(8)
-        self.fc = nn.Linear(64,num_classes)
+        self.fc = nn.Linear(64 * width,num_classes)
 
         # initialization by Kaiming strategy
         for m in self.modules():
@@ -144,4 +144,9 @@ def resnet56(num_classes=10):
 
 def resnet110(num_classes=10):
     model = ResNet(residual_block,110,num_classes)
+    return model
+
+
+def resnet(depth=8,width=1,num_classes=10):
+    model = ResNet(residual_block,depth,width,num_classes)
     return model

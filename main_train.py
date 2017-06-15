@@ -36,6 +36,8 @@ parser.add_argument('--dataset', default='mnist',          help='dataset: | cifa
 parser.add_argument('--dataroot',default='/home/leiwu/data/',help='root path that stores data')
 parser.add_argument('--arch',    default='lenet',         help='model used to classify the data set')
 parser.add_argument('--resume',  default='None',             help='path to load checkpoint model')
+parser.add_argument('--depth',   type=int, default=1)
+parser.add_argument('--width',   type=int, default=500)
 opt = parser.parse_args()
 opt.savepath = 'checkpoints/%s-%s.pkl'%(opt.arch,opt.dataset)
 print(opt)
@@ -54,6 +56,9 @@ train_loader, test_loader,num_classes = build_data_loader(opt)
 
 # [3] MODEL AND LOSS
 model = models.__dict__[opt.arch](num_classes)
+if opt.arch == 'fnn' or opt.arch == 'resnet':
+    model = models.__dict__[opt.arch](depth=opt.depth,width=opt.width,num_classes=num_classes)
+
 if opt.ngpu > 1:
     model = nn.DataParallel(model,device_ids=[0,1])
 model = model.cuda()
@@ -87,11 +92,12 @@ for epoch in range(1,opt.nepochs+1):
             trL,trA1,trA5,teL,teA1,teA5))
 
     #update checkpoints
+    torch.save(model.state_dict(),'pretrains/tmp.pkl')
     if best_acc1 < teA1:
         best_acc1,best_acc5 = teA1,teA5
         torch.save(model.state_dict(),'pretrains/best.pkl')
     print('Best Model: %.2f%%\t %.2f%%'%(best_acc1,best_acc5))
 
-torch.save(model.state_dict(),'pretrains/store/%s-%s-%.2f.pkl'%(opt.arch,opt.dataset,best_acc1))
+torch.save(model.state_dict(),'pretrains/store/%s-%s-%.2f.pkl'%(model.name,opt.dataset,best_acc1))
 
 
