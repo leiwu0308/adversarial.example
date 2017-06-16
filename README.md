@@ -30,8 +30,22 @@ performance for 20-step iteration gradient sign method
 |784-500-300-200x2-10   |98.64|96.48|91.66|80.02|59.55|41.03|29.37|22.39|18.67|
 |784-500-300-200x4-10   |98.50|95.78|89.90|78.61|65.25|59.47|56.62|54.89|53.85|
 
+#### Transferability
+Transferability of adversarial perturbation (niter=1,eps=40,B=40), for network 784-wxd-10,
+where $w\times d$, means d hidden layer of width w.
+
+|        |(500,1)|(500,3)|(500,5)|(500,9)|(500,11)|(2000,1)|(2000,3)|(4000,1)|
+|:--:    |:-----:|:-----:|:-----:|:-----:|:------:|:------:|:------:|:------:|
+|(500,1) | 10.63 | 37.06 | 37.10 | 35.58 |||||
+|(500,3) | 47.14 | 39.68 | 51.75 | 50.62 |||||
+|(500,5) | 52.70 | 56.95 | 44.16 | 55.17 |||||
+|(500,9) | 68.81 | 70.78 | 70.98 | 60.40 |||||
+
+
 ### Result for CIFAR10
+
 only one-step is used in this experiment.
+
 
 |perturbation| 0 | 1| 2 | 3 | 4 | 5 |
 |:--------:|:----:|:--:|:--:|:--:|:--:|:--:|
@@ -46,5 +60,9 @@ only one-step is used in this experiment.
 |ResNet-110|91.31|61.78|41.15|30.01|24.13|20.92|
 
 
+
 ## Adversarial training
+
+
+
 

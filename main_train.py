@@ -29,7 +29,7 @@ parser.add_argument('--shortcutType',default='A',help='set the shortcut type')
 parser.add_argument('--seed',type=int, default=123,help='manual seed')
 parser.add_argument('--workers',type=int,default=1,help='# of worker used to load data')
 parser.add_argument('--ngpu',type=int, default=1,       help='number of gpu')
-parser.add_argument('--gpuid',         default='1',     help='device id used to train [default 1]')
+parser.add_argument('--gpuid',         default='0,2',     help='device id used to train [default 1]')
 
 # -- dataset --
 parser.add_argument('--dataset', default='mnist',          help='dataset: | cifar10 | cifar100 | mnist [default] | imagenet')
@@ -59,6 +59,7 @@ model = models.__dict__[opt.arch](num_classes)
 if opt.arch == 'fnn' or opt.arch == 'resnet':
     model = models.__dict__[opt.arch](depth=opt.depth,width=opt.width,num_classes=num_classes)
 
+print(model.name)
 if opt.ngpu > 1:
     model = nn.DataParallel(model,device_ids=[0,1])
 model = model.cuda()

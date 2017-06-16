@@ -7,8 +7,6 @@ import torchvision.transforms as trans
 import torchvision.datasets as dsets
 from torch.autograd import Variable
 
-import matplotlib
-import matplotlib.pyplot as plt
 
 import os,math,random,argparse
 os.environ['CUDA_VISIBLE_DEVICES']='1'
@@ -20,8 +18,6 @@ import attacks
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--arch1',  default='linear_classifier',  help='network1')
-parser.add_argument('--arch2',  default='linear_classifier', help='network2')
 parser.add_argument('--path1',  default='../pretrains/store/linear_classifier-mnist-92.43.pkl', help='parameters of network1')
 parser.add_argument('--path2',  default='../pretrains/store/linear_classifier-mnist-92.39.pkl', help='parameters of network2')
 parser.add_argument('--lr', type=float, default=10,     help='step size of adversarial example generating method')
@@ -40,9 +36,11 @@ train_img, test_img = train_set.train_data.clone(), test_set.test_data.clone()
 train_loader = torch.utils.data.DataLoader(dataset=train_set,batch_size=opt.batch_size,shuffle=False)
 test_loader  = torch.utils.data.DataLoader(dataset=test_set, batch_size=opt.batch_size,shuffle=False)
 
-model1 = models.__dict__[opt.arch1]().cuda()
+arch1, depth1, width1 = utils.pathextract(opt.path1)
+arch2, depth2, width2 = utils.pathextract(opt.path2)
+model1 = utils.load_model(arch1,depth1,width1)
+model2 = utils.load_model(arch2,depth2,width2)
 model1.load_state_dict(torch.load(opt.path1))
-model2 = models.__dict__[opt.arch2]().cuda()
 model2.load_state_dict(torch.load(opt.path2))
 ct    = nn.CrossEntropyLoss().cuda()
 

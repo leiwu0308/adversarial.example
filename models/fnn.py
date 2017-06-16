@@ -13,7 +13,7 @@ class FNN(nn.Module):
         for i in range(self.depth):
             self.fc.append(nn.Linear(arch[i],arch[i+1]))
         self.fc = nn.ModuleList(self.fc)
-        self.name = 'fnn_depth%d_width%d'%(self.depth-1,arch[2])
+        self.name = 'fnn_depth_%d_width_%d'%(self.depth-1,arch[1])
 
         for m in self.modules():
             if isinstance(m,nn.Linear):

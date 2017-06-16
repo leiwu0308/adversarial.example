@@ -1,7 +1,9 @@
 import torch
 from torch.autograd import Variable
+import torch.nn as nn
 import torchvision as tv
 import os,math
+import models
 
 # loader MNIST
 
@@ -151,6 +153,23 @@ def quantify(img,level=2):
         mask = mask0 + mask
     x[x<step_v[1]] = 0
     return x.byte()
+
+
+
+def pathextract(path):
+    s = os.path.basename(path).split('-')[0]
+    s = s.split('_')
+    if s[0]=='fnn' or s[0]=='resnet':
+        return (s[0],int(s[2]),int(s[4]))
+    else:
+        return (s[0],0,0)
+
+def load_model(arch,depth,width):
+    model = models.__dict__[arch]().cuda()
+    if arch == 'fnn' or arch == 'resnet':
+        model = models.__dict__[arch](depth=depth,width=width).cuda()
+
+    return model
 
 
 if __name__ == '__main__':

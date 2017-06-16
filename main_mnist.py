@@ -7,8 +7,6 @@ import torchvision.transforms as trans
 import torchvision.datasets as dsets
 from torch.autograd import Variable
 
-import matplotlib
-import matplotlib.pyplot as plt
 
 import os,math,random,argparse
 os.environ['CUDA_VISIBLE_DEVICES']='1'
@@ -40,15 +38,12 @@ train_img, test_img = train_set.train_data.clone(), test_set.test_data.clone()
 train_loader = torch.utils.data.DataLoader(dataset=train_set,batch_size=batch_size,shuffle=False)
 test_loader  = torch.utils.data.DataLoader(dataset=test_set, batch_size=batch_size,shuffle=False)
 
-model = models.__dict__[opt.arch]().cuda()
-model.load_state_dict(torch.load(model_path))
-ct    = nn.CrossEntropyLoss().cuda()
+
+arch, depth, width = utils.pathextract(opt.modelpath)
+model,ct = utils.load_model(arch,depth,width)
+model.load_state_dict(torch.load(opt.modelpath))
 print(model)
 
-
-def show(img):
-    npimg = img.numpy()
-    plt.imshow(np.transpose(npimg,(1,2,0)),interpolation='nearest')
 
 #_,acc,_ = utils.eval(model,ct,test_loader)
 #print('clear data',acc)
