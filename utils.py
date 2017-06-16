@@ -164,10 +164,10 @@ def pathextract(path):
     else:
         return (s[0],0,0)
 
-def load_model(arch,depth,width):
+def load_model(arch,depth,width,num_classes=10):
     model = models.__dict__[arch]().cuda()
     if arch == 'fnn' or arch == 'resnet':
-        model = models.__dict__[arch](depth=depth,width=width).cuda()
+        model = models.__dict__[arch](depth=depth,width=width,num_classes=num_classes).cuda()
 
     return model
 

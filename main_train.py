@@ -55,9 +55,7 @@ cudnn.benchmark = True
 train_loader, test_loader,num_classes = build_data_loader(opt)
 
 # [3] MODEL AND LOSS
-model = models.__dict__[opt.arch](num_classes)
-if opt.arch == 'fnn' or opt.arch == 'resnet':
-    model = models.__dict__[opt.arch](depth=opt.depth,width=opt.width,num_classes=num_classes)
+model = load_model(opt.arch,depth=opt.depth,width=opt.width,num_classes=num_classes)
 
 print(model.name)
 if opt.ngpu > 1:
