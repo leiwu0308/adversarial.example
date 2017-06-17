@@ -8,7 +8,7 @@ import torchvision.datasets as dsets
 from torch.autograd import Variable
 
 
-import os,math,random,argparse
+import os,math,random,argparse,glob
 os.environ['CUDA_VISIBLE_DEVICES']='1'
 
 import utils
@@ -18,8 +18,8 @@ import attacks
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--path1',  default='../pretrains/store/linear_classifier-mnist-92.43.pkl', help='parameters of network1')
-parser.add_argument('--path2',  default='../pretrains/store/linear_classifier-mnist-92.39.pkl', help='parameters of network2')
+parser.add_argument('--path1',  default='../pretrains/store/fnn_depth_1_width_500-mnist-98.41.pkl', help='parameters of network1')
+parser.add_argument('--path2',  default=None, help='parameters of network1')
 parser.add_argument('--lr', type=float, default=10,     help='step size of adversarial example generating method')
 parser.add_argument('--eps',type=float, default=10,     help='maximal allowed average perturbation')
 parser.add_argument('--niter',type=int, default=1,      help='number of iteration')
@@ -37,11 +37,13 @@ train_loader = torch.utils.data.DataLoader(dataset=train_set,batch_size=opt.batc
 test_loader  = torch.utils.data.DataLoader(dataset=test_set, batch_size=opt.batch_size,shuffle=False)
 
 arch1, depth1, width1 = utils.pathextract(opt.path1)
-arch2, depth2, width2 = utils.pathextract(opt.path2)
 model1 = utils.load_model(arch1,depth1,width1)
-model2 = utils.load_model(arch2,depth2,width2)
 model1.load_state_dict(torch.load(opt.path1))
-model2.load_state_dict(torch.load(opt.path2))
+
+if opt.path2 is not None:
+    arch2, depth2, width2 = utils.pathextract(opt.path2)
+    model2 = utils.load_model(arch2,depth2,width2)
+    model2.load_state_dict(torch.load(opt.path2))
 ct    = nn.CrossEntropyLoss().cuda()
 
 if opt.data == 'test':
@@ -65,25 +67,28 @@ def batch_attack(model,ct,lr,eps,niter):
     adv_img = (adv_img*255).byte()
     return adv_img
 
+
+def attack_all_model(model_path):
+    acc = {}
+    for filename in glob.iglob(model_path+'/*mnist*'):
+        arch,depth,width = utils.pathextract(filename)
+        model = utils.load_model(arch,depth,width)
+        model.load_state_dict(torch.load(filename))
+        key = '%s_depth_%d_width_%d'%(arch,depth,width)
+        _,acc[key],_ = utils.eval(model,ct,data_loader)
+        print('%s \t    %.2f '%(key,acc[key]))
+
 ################################################
-adv_img = batch_attack(model1,ct,opt.lr/255.0,opt.eps/255.0,opt.niter)
-
 _,acc0,_ = utils.eval(model1,ct,data_loader)
+adv_img = batch_attack(model1,ct,opt.lr/255.0,opt.eps/255.0,opt.niter)
 img_pool.copy_(adv_img)
-_,acc1,_ = utils.eval(model1,ct,data_loader)
-_,acc2,_ = utils.eval(model2,ct,data_loader)
-img_pool.copy_(clean_img)
-print('net1 accuracy: %.2f'%(acc0))
-print('(1-->2) perturbation: %d, acc_net1: %.2f, acc_net2: %.2f\n'%(opt.eps,acc1,acc2))
+
+print('%s_depth_%d_width_%d, accuracy on clean data %.2f'%(arch1,depth1,width1,acc0))
+if opt.path2 is None:
+    attack_all_model('../pretrains/store/')
+else:
+    _,acc,_ = utils.eval(model2,ct,data_loader)
+    print('attack accuracy: %.2f'%(acc))
 
 
 
-adv_img = batch_attack(model2,ct,opt.lr/255.0,opt.eps/255.0,opt.niter)
-
-_,acc0,_ = utils.eval(model2,ct,data_loader)
-img_pool.copy_(adv_img)
-_,acc2,_ = utils.eval(model2,ct,data_loader)
-_,acc1,_ = utils.eval(model1,ct,data_loader)
-img_pool.copy_(clean_img)
-print('net2 accuracy: %.2f'%(acc0))
-print('(1<--2) perturbation: %d, acc_net1: %.2f, acc_net2: %.2f\n'%(opt.eps,acc1,acc2))

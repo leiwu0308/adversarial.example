@@ -1,0 +1,830 @@
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=1, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=500, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_1_width_500
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 500)
+    (1): Linear (500 -> 10)
+  )
+)
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=3, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=500, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_3_width_500
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 500)
+    (1): Linear (500 -> 500)
+    (2): Linear (500 -> 500)
+    (3): Linear (500 -> 10)
+  )
+)
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=5, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=500, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_5_width_500
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 500)
+    (1): Linear (500 -> 500)
+    (2): Linear (500 -> 500)
+    (3): Linear (500 -> 500)
+    (4): Linear (500 -> 500)
+    (5): Linear (500 -> 10)
+  )
+)
+[  1/35, 5 seconds] lr:1.00e-01 | train, 2.15e-01, 93.41, 99.34 |  test, 1.1e-01, 96.52, 99.90
+Best Model: 96.52%	 99.90%
+[  1/35, 5 seconds] lr:1.00e-01 | train, 2.25e-01, 93.37, 99.41 |  test, 1.1e-01, 96.51, 99.93
+Best Model: 96.51%	 99.93%
+[  1/35, 5 seconds] lr:1.00e-01 | train, 2.47e-01, 92.47, 99.15 |  test, 1.3e-01, 96.13, 99.85
+Best Model: 96.13%	 99.85%
+[  2/35, 5 seconds] lr:1.00e-01 | train, 8.48e-02, 97.43, 99.95 |  test, 8.2e-02, 97.32, 99.94
+Best Model: 97.32%	 99.94%
+[  2/35, 5 seconds] lr:1.00e-01 | train, 8.98e-02, 97.28, 99.94 |  test, 9.0e-02, 97.18, 99.94
+Best Model: 97.18%	 99.94%
+[  2/35, 5 seconds] lr:1.00e-01 | train, 1.05e-01, 96.84, 99.88 |  test, 1.1e-01, 96.72, 99.90
+Best Model: 96.72%	 99.90%
+[  3/35, 5 seconds] lr:1.00e-01 | train, 5.95e-02, 98.07, 99.98 |  test, 7.6e-02, 97.66, 99.99
+Best Model: 97.66%	 99.99%
+[  3/35, 5 seconds] lr:1.00e-01 | train, 6.18e-02, 98.17, 99.98 |  test, 6.9e-02, 97.76, 99.98
+Best Model: 97.76%	 99.98%
+[  3/35, 5 seconds] lr:1.00e-01 | train, 7.47e-02, 97.79, 99.95 |  test, 9.7e-02, 97.27, 99.90
+Best Model: 97.27%	 99.90%
+[  4/35, 5 seconds] lr:1.00e-01 | train, 4.30e-02, 98.62, 99.99 |  test, 9.5e-02, 97.15, 99.97
+Best Model: 97.66%	 99.99%
+[  4/35, 5 seconds] lr:1.00e-01 | train, 4.59e-02, 98.61, 99.99 |  test, 6.7e-02, 97.94, 99.98
+Best Model: 97.94%	 99.98%
+[  4/35, 5 seconds] lr:1.00e-01 | train, 5.60e-02, 98.28, 99.99 |  test, 1.0e-01, 97.12, 99.90
+Best Model: 97.27%	 99.90%
+[  5/35, 5 seconds] lr:1.00e-01 | train, 3.64e-02, 98.83, 100.00 |  test, 6.9e-02, 98.00, 99.94
+Best Model: 98.00%	 99.94%
+[  5/35, 5 seconds] lr:1.00e-01 | train, 3.33e-02, 99.10, 99.99 |  test, 6.5e-02, 97.91, 99.98
+Best Model: 97.94%	 99.98%
+[  5/35, 5 seconds] lr:1.00e-01 | train, 4.90e-02, 98.51, 99.98 |  test, 8.3e-02, 97.59, 99.93
+Best Model: 97.59%	 99.93%
+[  6/35, 5 seconds] lr:1.00e-01 | train, 2.78e-02, 99.10, 99.99 |  test, 6.9e-02, 98.12, 99.94
+Best Model: 98.12%	 99.94%
+[  6/35, 5 seconds] lr:1.00e-01 | train, 2.73e-02, 99.28, 99.99 |  test, 6.7e-02, 97.85, 99.95
+Best Model: 97.94%	 99.98%
+[  6/35, 5 seconds] lr:1.00e-01 | train, 3.92e-02, 98.82, 99.99 |  test, 9.1e-02, 97.86, 99.81
+Best Model: 97.86%	 99.81%
+[  7/35, 5 seconds] lr:1.00e-01 | train, 2.43e-02, 99.18, 99.99 |  test, 6.4e-02, 98.17, 99.97
+Best Model: 98.17%	 99.97%
+[  7/35, 5 seconds] lr:1.00e-01 | train, 2.15e-02, 99.46, 100.00 |  test, 6.2e-02, 97.99, 99.99
+Best Model: 97.99%	 99.99%
+[  7/35, 5 seconds] lr:1.00e-01 | train, 3.73e-02, 98.79, 99.99 |  test, 8.5e-02, 97.59, 99.92
+Best Model: 97.86%	 99.81%
+[  8/35, 5 seconds] lr:1.00e-01 | train, 2.46e-02, 99.23, 100.00 |  test, 7.7e-02, 97.78, 99.95
+Best Model: 98.17%	 99.97%
+[  8/35, 5 seconds] lr:1.00e-01 | train, 1.78e-02, 99.60, 100.00 |  test, 5.9e-02, 98.10, 99.98
+Best Model: 98.10%	 99.98%
+[  8/35, 5 seconds] lr:1.00e-01 | train, 3.09e-02, 99.03, 99.99 |  test, 9.3e-02, 97.50, 99.94
+Best Model: 97.86%	 99.81%
+[  9/35, 5 seconds] lr:1.00e-01 | train, 1.82e-02, 99.43, 100.00 |  test, 5.9e-02, 98.27, 99.98
+Best Model: 98.27%	 99.98%
+[  9/35, 5 seconds] lr:1.00e-01 | train, 1.50e-02, 99.70, 100.00 |  test, 6.0e-02, 97.97, 99.98
+Best Model: 98.10%	 99.98%
+[  9/35, 5 seconds] lr:1.00e-01 | train, 2.95e-02, 99.08, 100.00 |  test, 1.0e-01, 97.38, 99.84
+Best Model: 97.86%	 99.81%
+[ 10/35, 5 seconds] lr:1.00e-01 | train, 1.61e-02, 99.46, 100.00 |  test, 7.5e-02, 97.97, 99.97
+Best Model: 98.27%	 99.98%
+[ 10/35, 5 seconds] lr:1.00e-01 | train, 1.29e-02, 99.78, 100.00 |  test, 5.5e-02, 98.36, 99.99
+Best Model: 98.36%	 99.99%
+[ 10/35, 5 seconds] lr:1.00e-01 | train, 2.77e-02, 99.16, 99.99 |  test, 8.7e-02, 97.71, 99.88
+Best Model: 97.86%	 99.81%
+[ 11/35, 5 seconds] lr:1.00e-01 | train, 1.57e-02, 99.50, 100.00 |  test, 6.5e-02, 98.26, 99.97
+Best Model: 98.27%	 99.98%
+[ 11/35, 5 seconds] lr:1.00e-01 | train, 1.17e-02, 99.83, 100.00 |  test, 5.6e-02, 98.19, 99.99
+Best Model: 98.36%	 99.99%
+[ 11/35, 5 seconds] lr:1.00e-01 | train, 2.61e-02, 99.19, 100.00 |  test, 8.3e-02, 97.67, 99.91
+Best Model: 97.86%	 99.81%
+[ 12/35, 5 seconds] lr:1.00e-01 | train, 1.09e-02, 99.67, 100.00 |  test, 6.3e-02, 98.23, 99.97
+Best Model: 98.27%	 99.98%
+[ 12/35, 5 seconds] lr:1.00e-01 | train, 1.06e-02, 99.86, 100.00 |  test, 5.2e-02, 98.29, 99.98
+Best Model: 98.36%	 99.99%
+[ 12/35, 5 seconds] lr:1.00e-01 | train, 2.60e-02, 99.18, 100.00 |  test, 8.6e-02, 97.70, 99.96
+Best Model: 97.86%	 99.81%
+[ 13/35, 5 seconds] lr:1.00e-01 | train, 1.19e-02, 99.62, 100.00 |  test, 7.5e-02, 97.80, 99.97
+Best Model: 98.27%	 99.98%
+[ 13/35, 5 seconds] lr:1.00e-01 | train, 9.80e-03, 99.88, 100.00 |  test, 5.5e-02, 98.32, 99.99
+Best Model: 98.36%	 99.99%
+[ 13/35, 6 seconds] lr:1.00e-01 | train, 2.20e-02, 99.26, 99.99 |  test, 7.4e-02, 97.88, 99.96
+Best Model: 97.88%	 99.96%
+[ 14/35, 5 seconds] lr:1.00e-01 | train, 1.19e-02, 99.62, 100.00 |  test, 7.1e-02, 98.19, 99.95
+Best Model: 98.27%	 99.98%
+[ 14/35, 5 seconds] lr:1.00e-01 | train, 8.66e-03, 99.93, 100.00 |  test, 5.2e-02, 98.24, 100.00
+Best Model: 98.36%	 99.99%
+[ 14/35, 5 seconds] lr:1.00e-01 | train, 1.84e-02, 99.43, 99.99 |  test, 9.7e-02, 97.68, 99.89
+Best Model: 97.88%	 99.96%
+[ 15/35, 5 seconds] lr:1.00e-01 | train, 1.35e-02, 99.57, 100.00 |  test, 6.8e-02, 98.14, 99.95
+Best Model: 98.27%	 99.98%
+[ 15/35, 5 seconds] lr:1.00e-01 | train, 8.42e-03, 99.94, 100.00 |  test, 5.4e-02, 98.29, 99.99
+Best Model: 98.36%	 99.99%
+[ 15/35, 5 seconds] lr:1.00e-01 | train, 2.02e-02, 99.37, 100.00 |  test, 7.3e-02, 98.06, 99.93
+Best Model: 98.06%	 99.93%
+[ 16/35, 5 seconds] lr:1.00e-01 | train, 1.24e-02, 99.60, 100.00 |  test, 6.6e-02, 98.30, 99.97
+Best Model: 98.30%	 99.97%
+[ 16/35, 5 seconds] lr:1.00e-01 | train, 8.14e-03, 99.95, 100.00 |  test, 5.3e-02, 98.33, 99.99
+Best Model: 98.36%	 99.99%
+[ 16/35, 5 seconds] lr:1.00e-01 | train, 1.77e-02, 99.47, 100.00 |  test, 8.4e-02, 97.85, 99.92
+Best Model: 98.06%	 99.93%
+[ 17/35, 5 seconds] lr:1.00e-01 | train, 1.11e-02, 99.63, 100.00 |  test, 6.5e-02, 98.31, 99.97
+Best Model: 98.31%	 99.97%
+[ 17/35, 5 seconds] lr:1.00e-01 | train, 8.04e-03, 99.95, 100.00 |  test, 5.1e-02, 98.32, 99.97
+Best Model: 98.36%	 99.99%
+[ 17/35, 5 seconds] lr:1.00e-01 | train, 2.11e-02, 99.33, 100.00 |  test, 8.4e-02, 97.82, 99.97
+Best Model: 98.06%	 99.93%
+[ 18/35, 5 seconds] lr:1.00e-01 | train, 9.27e-03, 99.72, 100.00 |  test, 7.1e-02, 98.12, 99.96
+Best Model: 98.31%	 99.97%
+[ 18/35, 5 seconds] lr:1.00e-01 | train, 8.05e-03, 99.96, 100.00 |  test, 5.1e-02, 98.30, 99.98
+Best Model: 98.36%	 99.99%
+[ 18/35, 5 seconds] lr:1.00e-01 | train, 1.86e-02, 99.41, 100.00 |  test, 8.2e-02, 98.04, 99.88
+Best Model: 98.06%	 99.93%
+[ 19/35, 5 seconds] lr:1.00e-01 | train, 1.09e-02, 99.66, 100.00 |  test, 7.1e-02, 97.98, 100.00
+Best Model: 98.31%	 99.97%
+[ 19/35, 5 seconds] lr:1.00e-01 | train, 7.88e-03, 99.96, 100.00 |  test, 5.2e-02, 98.34, 99.99
+Best Model: 98.36%	 99.99%
+[ 19/35, 5 seconds] lr:1.00e-01 | train, 1.79e-02, 99.42, 100.00 |  test, 7.0e-02, 98.21, 99.94
+Best Model: 98.21%	 99.94%
+[ 20/35, 5 seconds] lr:1.00e-02 | train, 2.76e-03, 99.95, 100.00 |  test, 5.1e-02, 98.57, 99.99
+Best Model: 98.57%	 99.99%
+[ 20/35, 5 seconds] lr:1.00e-02 | train, 5.80e-03, 99.99, 100.00 |  test, 4.9e-02, 98.38, 99.99
+Best Model: 98.38%	 99.99%
+[ 20/35, 5 seconds] lr:1.00e-02 | train, 5.73e-03, 99.84, 100.00 |  test, 5.4e-02, 98.56, 99.92
+Best Model: 98.56%	 99.92%
+[ 21/35, 5 seconds] lr:1.00e-02 | train, 1.32e-03, 100.00, 100.00 |  test, 5.1e-02, 98.57, 99.99
+Best Model: 98.57%	 99.99%
+[ 21/35, 5 seconds] lr:1.00e-02 | train, 5.39e-03, 100.00, 100.00 |  test, 5.0e-02, 98.38, 99.99
+Best Model: 98.38%	 99.99%
+[ 21/35, 5 seconds] lr:1.00e-02 | train, 1.79e-03, 99.98, 100.00 |  test, 5.4e-02, 98.53, 99.93
+Best Model: 98.56%	 99.92%
+[ 22/35, 5 seconds] lr:1.00e-02 | train, 1.04e-03, 100.00, 100.00 |  test, 5.0e-02, 98.59, 99.99
+Best Model: 98.59%	 99.99%
+[ 22/35, 5 seconds] lr:1.00e-02 | train, 5.33e-03, 100.00, 100.00 |  test, 4.9e-02, 98.35, 99.99
+Best Model: 98.38%	 99.99%
+[ 22/35, 5 seconds] lr:1.00e-02 | train, 1.24e-03, 99.99, 100.00 |  test, 5.4e-02, 98.57, 99.94
+Best Model: 98.57%	 99.94%
+[ 23/35, 5 seconds] lr:1.00e-02 | train, 9.06e-04, 100.00, 100.00 |  test, 5.0e-02, 98.60, 99.99
+Best Model: 98.60%	 99.99%
+[ 23/35, 5 seconds] lr:1.00e-02 | train, 5.31e-03, 100.00, 100.00 |  test, 4.9e-02, 98.39, 99.99
+Best Model: 98.39%	 99.99%
+[ 23/35, 5 seconds] lr:1.00e-02 | train, 9.90e-04, 99.99, 100.00 |  test, 5.5e-02, 98.56, 99.94
+Best Model: 98.57%	 99.94%
+[ 24/35, 5 seconds] lr:1.00e-02 | train, 8.21e-04, 100.00, 100.00 |  test, 4.9e-02, 98.61, 99.99
+Best Model: 98.61%	 99.99%
+[ 24/35, 5 seconds] lr:1.00e-02 | train, 5.29e-03, 100.00, 100.00 |  test, 4.9e-02, 98.38, 99.99
+Best Model: 98.39%	 99.99%
+[ 24/35, 5 seconds] lr:1.00e-02 | train, 8.53e-04, 99.99, 100.00 |  test, 5.5e-02, 98.57, 99.94
+[ 25/35, 5 seconds] lr:1.00e-02 | train, 7.65e-04, 100.00, 100.00 |  test, 4.9e-02, 98.61, 99.99
+Best Model: 98.57%	 99.94%
+Best Model: 98.61%	 99.99%
+[ 25/35, 5 seconds] lr:1.00e-02 | train, 5.31e-03, 100.00, 100.00 |  test, 4.9e-02, 98.36, 99.99
+Best Model: 98.39%	 99.99%
+[ 26/35, 5 seconds] lr:1.00e-02 | train, 7.20e-04, 100.00, 100.00 |  test, 4.9e-02, 98.62, 99.99
+Best Model: 98.62%	 99.99%
+[ 25/35, 5 seconds] lr:1.00e-02 | train, 7.66e-04, 99.99, 100.00 |  test, 5.5e-02, 98.57, 99.94
+Best Model: 98.57%	 99.94%
+[ 26/35, 5 seconds] lr:1.00e-02 | train, 5.33e-03, 100.00, 100.00 |  test, 4.9e-02, 98.39, 100.00
+Best Model: 98.39%	 99.99%
+[ 27/35, 5 seconds] lr:1.00e-02 | train, 6.89e-04, 100.00, 100.00 |  test, 4.9e-02, 98.61, 99.99
+Best Model: 98.62%	 99.99%
+[ 26/35, 5 seconds] lr:1.00e-02 | train, 6.95e-04, 99.99, 100.00 |  test, 5.5e-02, 98.58, 99.93
+Best Model: 98.58%	 99.93%
+[ 27/35, 5 seconds] lr:1.00e-02 | train, 5.34e-03, 100.00, 100.00 |  test, 4.9e-02, 98.40, 100.00
+Best Model: 98.40%	 100.00%
+[ 28/35, 5 seconds] lr:1.00e-02 | train, 6.69e-04, 100.00, 100.00 |  test, 4.9e-02, 98.59, 99.99
+Best Model: 98.62%	 99.99%
+[ 27/35, 5 seconds] lr:1.00e-02 | train, 6.47e-04, 100.00, 100.00 |  test, 5.6e-02, 98.58, 99.93
+Best Model: 98.58%	 99.93%
+[ 28/35, 5 seconds] lr:1.00e-02 | train, 5.37e-03, 100.00, 100.00 |  test, 4.9e-02, 98.40, 99.99
+Best Model: 98.40%	 100.00%
+[ 29/35, 5 seconds] lr:1.00e-02 | train, 6.54e-04, 100.00, 100.00 |  test, 4.9e-02, 98.60, 99.99
+Best Model: 98.62%	 99.99%
+[ 28/35, 5 seconds] lr:1.00e-02 | train, 6.06e-04, 100.00, 100.00 |  test, 5.6e-02, 98.59, 99.94
+Best Model: 98.59%	 99.94%
+[ 29/35, 5 seconds] lr:1.00e-02 | train, 5.38e-03, 100.00, 100.00 |  test, 4.9e-02, 98.38, 100.00
+Best Model: 98.40%	 100.00%
+[ 30/35, 5 seconds] lr:1.00e-03 | train, 6.27e-04, 100.00, 100.00 |  test, 4.9e-02, 98.60, 99.99
+Best Model: 98.62%	 99.99%
+[ 29/35, 5 seconds] lr:1.00e-02 | train, 5.74e-04, 100.00, 100.00 |  test, 5.6e-02, 98.60, 99.93
+Best Model: 98.60%	 99.93%
+[ 30/35, 5 seconds] lr:1.00e-03 | train, 5.26e-03, 100.00, 100.00 |  test, 4.9e-02, 98.40, 100.00
+Best Model: 98.40%	 100.00%
+[ 31/35, 5 seconds] lr:1.00e-03 | train, 6.26e-04, 100.00, 100.00 |  test, 4.9e-02, 98.62, 99.99
+Best Model: 98.62%	 99.99%
+[ 30/35, 5 seconds] lr:1.00e-03 | train, 5.41e-04, 100.00, 100.00 |  test, 5.6e-02, 98.59, 99.93
+Best Model: 98.60%	 99.93%
+[ 31/35, 5 seconds] lr:1.00e-03 | train, 5.26e-03, 100.00, 100.00 |  test, 4.9e-02, 98.40, 100.00
+Best Model: 98.40%	 100.00%
+[ 32/35, 5 seconds] lr:1.00e-03 | train, 6.25e-04, 100.00, 100.00 |  test, 4.9e-02, 98.62, 99.99
+Best Model: 98.62%	 99.99%
+[ 31/35, 5 seconds] lr:1.00e-03 | train, 5.39e-04, 100.00, 100.00 |  test, 5.6e-02, 98.59, 99.93
+Best Model: 98.60%	 99.93%
+[ 32/35, 5 seconds] lr:1.00e-03 | train, 5.26e-03, 100.00, 100.00 |  test, 4.9e-02, 98.40, 100.00
+Best Model: 98.40%	 100.00%
+[ 33/35, 5 seconds] lr:1.00e-03 | train, 6.23e-04, 100.00, 100.00 |  test, 4.9e-02, 98.62, 99.99
+Best Model: 98.62%	 99.99%
+[ 32/35, 5 seconds] lr:1.00e-03 | train, 5.36e-04, 100.00, 100.00 |  test, 5.6e-02, 98.59, 99.93
+Best Model: 98.60%	 99.93%
+[ 33/35, 5 seconds] lr:1.00e-03 | train, 5.26e-03, 100.00, 100.00 |  test, 4.9e-02, 98.40, 100.00
+Best Model: 98.40%	 100.00%
+[ 34/35, 5 seconds] lr:1.00e-03 | train, 6.23e-04, 100.00, 100.00 |  test, 4.9e-02, 98.62, 99.99
+Best Model: 98.62%	 99.99%
+[ 33/35, 5 seconds] lr:1.00e-03 | train, 5.35e-04, 100.00, 100.00 |  test, 5.6e-02, 98.59, 99.93
+Best Model: 98.60%	 99.93%
+[ 34/35, 5 seconds] lr:1.00e-03 | train, 5.26e-03, 100.00, 100.00 |  test, 4.9e-02, 98.41, 100.00
+Best Model: 98.41%	 100.00%
+[ 35/35, 5 seconds] lr:1.00e-03 | train, 6.22e-04, 100.00, 100.00 |  test, 4.9e-02, 98.62, 99.99
+Best Model: 98.62%	 99.99%
+[ 34/35, 5 seconds] lr:1.00e-03 | train, 5.32e-04, 100.00, 100.00 |  test, 5.6e-02, 98.59, 99.93
+Best Model: 98.60%	 99.93%
+[ 35/35, 5 seconds] lr:1.00e-03 | train, 5.26e-03, 100.00, 100.00 |  test, 4.9e-02, 98.40, 100.00
+Best Model: 98.41%	 100.00%
+[ 35/35, 5 seconds] lr:1.00e-03 | train, 5.30e-04, 100.00, 100.00 |  test, 5.6e-02, 98.59, 99.93
+Best Model: 98.60%	 99.93%
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=9, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=500, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_9_width_500
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 500)
+    (1): Linear (500 -> 500)
+    (2): Linear (500 -> 500)
+    (3): Linear (500 -> 500)
+    (4): Linear (500 -> 500)
+    (5): Linear (500 -> 500)
+    (6): Linear (500 -> 500)
+    (7): Linear (500 -> 500)
+    (8): Linear (500 -> 500)
+    (9): Linear (500 -> 10)
+  )
+)
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=11, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=500, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_11_width_500
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 500)
+    (1): Linear (500 -> 500)
+    (2): Linear (500 -> 500)
+    (3): Linear (500 -> 500)
+    (4): Linear (500 -> 500)
+    (5): Linear (500 -> 500)
+    (6): Linear (500 -> 500)
+    (7): Linear (500 -> 500)
+    (8): Linear (500 -> 500)
+    (9): Linear (500 -> 500)
+    (10): Linear (500 -> 500)
+    (11): Linear (500 -> 10)
+  )
+)
+[  1/35, 6 seconds] lr:1.00e-01 | train, nan, 0.64, 2.46 |  test, nan, 0.53, 2.46
+Best Model: 0.53%	 2.46%
+[  1/35, 6 seconds] lr:1.00e-01 | train, 1.02e+00, 63.91, 88.68 |  test, 2.7e-01, 93.01, 99.11
+Best Model: 93.01%	 99.11%
+[  2/35, 5 seconds] lr:1.00e-01 | train, nan, 0.03, 0.13 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[  2/35, 5 seconds] lr:1.00e-01 | train, 1.95e-01, 95.07, 99.35 |  test, 1.5e-01, 96.08, 99.41
+Best Model: 96.08%	 99.41%
+[  3/35, 5 seconds] lr:1.00e-01 | train, nan, 0.02, 0.11 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[  3/35, 5 seconds] lr:1.00e-01 | train, 1.31e-01, 96.61, 99.64 |  test, 1.4e-01, 96.47, 99.61
+Best Model: 96.47%	 99.61%
+[  4/35, 5 seconds] lr:1.00e-01 | train, nan, 0.03, 0.15 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[  4/35, 5 seconds] lr:1.00e-01 | train, 1.11e-01, 97.11, 99.73 |  test, 1.3e-01, 96.72, 99.47
+Best Model: 96.72%	 99.47%
+[  5/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.18 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[  5/35, 5 seconds] lr:1.00e-01 | train, 8.70e-02, 97.67, 99.78 |  test, 9.9e-02, 97.38, 99.73
+Best Model: 97.38%	 99.73%
+[  6/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.18 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[  6/35, 5 seconds] lr:1.00e-01 | train, 8.04e-02, 97.89, 99.83 |  test, 9.2e-02, 97.69, 99.67
+Best Model: 97.69%	 99.67%
+[  7/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.16 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[  7/35, 5 seconds] lr:1.00e-01 | train, 6.90e-02, 98.12, 99.86 |  test, 9.6e-02, 97.58, 99.65
+Best Model: 97.69%	 99.67%
+[  8/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.19 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[  8/35, 5 seconds] lr:1.00e-01 | train, 6.30e-02, 98.32, 99.90 |  test, 1.1e-01, 97.19, 99.69
+Best Model: 97.69%	 99.67%
+[  9/35, 5 seconds] lr:1.00e-01 | train, nan, 0.02, 0.10 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[  9/35, 5 seconds] lr:1.00e-01 | train, 5.92e-02, 98.38, 99.90 |  test, 8.9e-02, 97.59, 99.77
+Best Model: 97.69%	 99.67%
+[ 10/35, 5 seconds] lr:1.00e-01 | train, nan, 0.03, 0.14 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 10/35, 5 seconds] lr:1.00e-01 | train, 5.67e-02, 98.53, 99.91 |  test, 1.4e-01, 96.88, 99.61
+Best Model: 97.69%	 99.67%
+[ 11/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.18 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 11/35, 6 seconds] lr:1.00e-01 | train, 5.33e-02, 98.61, 99.91 |  test, 8.7e-02, 97.86, 99.78
+Best Model: 97.86%	 99.78%
+[ 12/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.17 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 12/35, 5 seconds] lr:1.00e-01 | train, 4.43e-02, 98.82, 99.92 |  test, 1.0e-01, 97.70, 99.76
+Best Model: 97.86%	 99.78%
+[ 13/35, 5 seconds] lr:1.00e-01 | train, nan, 0.03, 0.15 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 13/35, 5 seconds] lr:1.00e-01 | train, 4.78e-02, 98.69, 99.92 |  test, 9.9e-02, 97.69, 99.72
+Best Model: 97.86%	 99.78%
+[ 14/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.16 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 14/35, 5 seconds] lr:1.00e-01 | train, 4.22e-02, 98.83, 99.93 |  test, 1.1e-01, 97.48, 99.66
+Best Model: 97.86%	 99.78%
+[ 15/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.20 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 15/35, 5 seconds] lr:1.00e-01 | train, 3.67e-02, 99.07, 99.93 |  test, 1.0e-01, 97.68, 99.72
+Best Model: 97.86%	 99.78%
+[ 16/35, 5 seconds] lr:1.00e-01 | train, nan, 0.05, 0.20 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 16/35, 5 seconds] lr:1.00e-01 | train, 3.86e-02, 98.99, 99.92 |  test, 1.2e-01, 97.36, 99.65
+Best Model: 97.86%	 99.78%
+[ 17/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.16 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 17/35, 5 seconds] lr:1.00e-01 | train, 3.98e-02, 98.90, 99.95 |  test, 1.1e-01, 97.74, 99.72
+Best Model: 97.86%	 99.78%
+[ 18/35, 5 seconds] lr:1.00e-01 | train, nan, 0.03, 0.15 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 18/35, 5 seconds] lr:1.00e-01 | train, 4.04e-02, 98.89, 99.94 |  test, 1.1e-01, 97.49, 99.77
+Best Model: 97.86%	 99.78%
+[ 19/35, 5 seconds] lr:1.00e-01 | train, nan, 0.04, 0.18 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 19/35, 5 seconds] lr:1.00e-01 | train, 3.31e-02, 99.11, 99.95 |  test, 8.7e-02, 98.20, 99.74
+Best Model: 98.20%	 99.74%
+[ 20/35, 5 seconds] lr:1.00e-02 | train, nan, 0.04, 0.18 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 20/35, 5 seconds] lr:1.00e-02 | train, 9.61e-03, 99.74, 99.98 |  test, 7.1e-02, 98.46, 99.79
+Best Model: 98.46%	 99.79%
+[ 21/35, 5 seconds] lr:1.00e-02 | train, nan, 0.05, 0.21 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 21/35, 5 seconds] lr:1.00e-02 | train, 5.07e-03, 99.89, 99.99 |  test, 7.1e-02, 98.54, 99.82
+Best Model: 98.54%	 99.82%
+[ 22/35, 5 seconds] lr:1.00e-02 | train, nan, 0.04, 0.18 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 23/35, 5 seconds] lr:1.00e-02 | train, nan, 0.03, 0.16 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 22/35, 5 seconds] lr:1.00e-02 | train, 3.83e-03, 99.91, 99.99 |  test, 7.3e-02, 98.52, 99.82
+Best Model: 98.54%	 99.82%
+[ 24/35, 5 seconds] lr:1.00e-02 | train, nan, 0.05, 0.20 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 23/35, 5 seconds] lr:1.00e-02 | train, 3.15e-03, 99.93, 100.00 |  test, 7.5e-02, 98.52, 99.80
+Best Model: 98.54%	 99.82%
+[ 25/35, 5 seconds] lr:1.00e-02 | train, nan, 0.04, 0.16 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 24/35, 5 seconds] lr:1.00e-02 | train, 2.71e-03, 99.94, 100.00 |  test, 7.6e-02, 98.52, 99.79
+Best Model: 98.54%	 99.82%
+[ 26/35, 5 seconds] lr:1.00e-02 | train, nan, 0.05, 0.21 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 25/35, 5 seconds] lr:1.00e-02 | train, 2.38e-03, 99.95, 100.00 |  test, 7.7e-02, 98.54, 99.80
+Best Model: 98.54%	 99.82%
+[ 27/35, 5 seconds] lr:1.00e-02 | train, nan, 0.05, 0.21 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 26/35, 5 seconds] lr:1.00e-02 | train, 2.11e-03, 99.95, 100.00 |  test, 7.9e-02, 98.58, 99.81
+Best Model: 98.58%	 99.81%
+[ 28/35, 5 seconds] lr:1.00e-02 | train, nan, 0.03, 0.17 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 27/35, 5 seconds] lr:1.00e-02 | train, 1.96e-03, 99.95, 100.00 |  test, 8.0e-02, 98.58, 99.83
+Best Model: 98.58%	 99.81%
+[ 29/35, 5 seconds] lr:1.00e-02 | train, nan, 0.03, 0.13 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 28/35, 5 seconds] lr:1.00e-02 | train, 1.78e-03, 99.97, 100.00 |  test, 8.1e-02, 98.57, 99.83
+Best Model: 98.58%	 99.81%
+[ 30/35, 5 seconds] lr:1.00e-03 | train, nan, 0.04, 0.17 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 29/35, 5 seconds] lr:1.00e-02 | train, 1.65e-03, 99.97, 100.00 |  test, 8.2e-02, 98.57, 99.81
+Best Model: 98.58%	 99.81%
+[ 31/35, 5 seconds] lr:1.00e-03 | train, nan, 0.04, 0.18 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 30/35, 5 seconds] lr:1.00e-03 | train, 1.52e-03, 99.97, 100.00 |  test, 8.2e-02, 98.57, 99.81
+Best Model: 98.58%	 99.81%
+[ 32/35, 5 seconds] lr:1.00e-03 | train, nan, 0.03, 0.14 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 31/35, 5 seconds] lr:1.00e-03 | train, 1.50e-03, 99.97, 100.00 |  test, 8.2e-02, 98.57, 99.82
+Best Model: 98.58%	 99.81%
+[ 33/35, 5 seconds] lr:1.00e-03 | train, nan, 0.05, 0.20 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 32/35, 5 seconds] lr:1.00e-03 | train, 1.47e-03, 99.97, 100.00 |  test, 8.2e-02, 98.57, 99.82
+Best Model: 98.58%	 99.81%
+[ 34/35, 5 seconds] lr:1.00e-03 | train, nan, 0.05, 0.21 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 33/35, 5 seconds] lr:1.00e-03 | train, 1.46e-03, 99.97, 100.00 |  test, 8.3e-02, 98.57, 99.82
+Best Model: 98.58%	 99.81%
+[ 35/35, 5 seconds] lr:1.00e-03 | train, nan, 0.04, 0.16 |  test, nan, 0.00, 0.00
+Best Model: 0.53%	 2.46%
+[ 34/35, 5 seconds] lr:1.00e-03 | train, 1.45e-03, 99.97, 100.00 |  test, 8.3e-02, 98.57, 99.82
+Best Model: 98.58%	 99.81%
+[ 35/35, 5 seconds] lr:1.00e-03 | train, 1.43e-03, 99.97, 100.00 |  test, 8.3e-02, 98.56, 99.83
+Best Model: 98.58%	 99.81%
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=1, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=2000, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_1_width_2000
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 2000)
+    (1): Linear (2000 -> 10)
+  )
+)
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=3, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=2000, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_3_width_2000
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 2000)
+    (1): Linear (2000 -> 2000)
+    (2): Linear (2000 -> 2000)
+    (3): Linear (2000 -> 10)
+  )
+)
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=5, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=2000, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_5_width_2000
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 2000)
+    (1): Linear (2000 -> 2000)
+    (2): Linear (2000 -> 2000)
+    (3): Linear (2000 -> 2000)
+    (4): Linear (2000 -> 2000)
+    (5): Linear (2000 -> 10)
+  )
+)
+[  1/35, 5 seconds] lr:1.00e-01 | train, 2.05e-01, 93.90, 99.44 |  test, 1.1e-01, 96.51, 99.90
+Best Model: 96.51%	 99.90%
+[  1/35, 7 seconds] lr:1.00e-01 | train, 2.09e-01, 93.82, 99.28 |  test, 8.9e-02, 96.98, 99.96
+Best Model: 96.98%	 99.96%
+[  2/35, 5 seconds] lr:1.00e-01 | train, 7.58e-02, 97.76, 99.97 |  test, 7.7e-02, 97.66, 99.93
+Best Model: 97.66%	 99.93%
+[  1/35, 11 seconds] lr:1.00e-01 | train, 2.94e-01, 91.30, 98.53 |  test, 1.2e-01, 96.67, 99.85
+Best Model: 96.67%	 99.85%
+[  2/35, 7 seconds] lr:1.00e-01 | train, 7.17e-02, 97.71, 99.96 |  test, 7.7e-02, 97.61, 99.97
+Best Model: 97.61%	 99.97%
+[  3/35, 5 seconds] lr:1.00e-01 | train, 4.90e-02, 98.59, 99.99 |  test, 6.6e-02, 97.99, 99.96
+Best Model: 97.99%	 99.96%
+[  4/35, 5 seconds] lr:1.00e-01 | train, 3.38e-02, 99.10, 99.99 |  test, 6.4e-02, 97.88, 99.98
+Best Model: 97.99%	 99.96%
+[  2/35, 11 seconds] lr:1.00e-01 | train, 8.87e-02, 97.36, 99.93 |  test, 9.5e-02, 97.09, 99.96
+[  3/35, 8 seconds] lr:1.00e-01 | train, 4.46e-02, 98.59, 99.99 |  test, 6.0e-02, 98.18, 99.95
+Best Model: 98.18%	 99.95%
+Best Model: 97.09%	 99.96%
+[  5/35, 5 seconds] lr:1.00e-01 | train, 2.46e-02, 99.39, 100.00 |  test, 5.6e-02, 98.25, 99.97
+Best Model: 98.25%	 99.97%
+[  4/35, 8 seconds] lr:1.00e-01 | train, 3.27e-02, 98.93, 99.99 |  test, 6.4e-02, 98.13, 99.98
+Best Model: 98.18%	 99.95%
+[  6/35, 5 seconds] lr:1.00e-01 | train, 1.83e-02, 99.62, 100.00 |  test, 6.0e-02, 97.90, 99.96
+Best Model: 98.25%	 99.97%
+[  3/35, 11 seconds] lr:1.00e-01 | train, 6.10e-02, 98.14, 99.96 |  test, 8.5e-02, 97.52, 99.93
+Best Model: 97.52%	 99.93%
+[  7/35, 6 seconds] lr:1.00e-01 | train, 1.47e-02, 99.74, 100.00 |  test, 5.2e-02, 98.21, 100.00
+Best Model: 98.25%	 99.97%
+[  5/35, 8 seconds] lr:1.00e-01 | train, 2.55e-02, 99.19, 99.99 |  test, 6.5e-02, 98.25, 99.96
+Best Model: 98.25%	 99.96%
+[  8/35, 6 seconds] lr:1.00e-01 | train, 1.20e-02, 99.84, 100.00 |  test, 5.3e-02, 98.26, 99.98
+Best Model: 98.26%	 99.98%
+[  4/35, 11 seconds] lr:1.00e-01 | train, 4.85e-02, 98.50, 99.97 |  test, 7.5e-02, 97.72, 99.91
+Best Model: 97.72%	 99.91%
+[  6/35, 8 seconds] lr:1.00e-01 | train, 1.82e-02, 99.42, 100.00 |  test, 6.7e-02, 98.13, 99.97
+Best Model: 98.25%	 99.96%
+[  9/35, 5 seconds] lr:1.00e-01 | train, 1.03e-02, 99.87, 100.00 |  test, 5.2e-02, 98.26, 99.98
+Best Model: 98.26%	 99.98%
+[ 10/35, 6 seconds] lr:1.00e-01 | train, 9.34e-03, 99.91, 100.00 |  test, 5.1e-02, 98.25, 99.98
+Best Model: 98.26%	 99.98%
+[  7/35, 8 seconds] lr:1.00e-01 | train, 1.46e-02, 99.54, 100.00 |  test, 6.7e-02, 98.07, 99.97
+Best Model: 98.25%	 99.96%
+[  5/35, 11 seconds] lr:1.00e-01 | train, 3.88e-02, 98.80, 99.98 |  test, 7.4e-02, 97.91, 99.94
+Best Model: 97.91%	 99.94%
+[ 11/35, 5 seconds] lr:1.00e-01 | train, 8.54e-03, 99.95, 100.00 |  test, 5.5e-02, 98.16, 99.99
+Best Model: 98.26%	 99.98%
+[  8/35, 7 seconds] lr:1.00e-01 | train, 1.59e-02, 99.50, 100.00 |  test, 8.3e-02, 97.70, 99.96
+Best Model: 98.25%	 99.96%
+[ 12/35, 5 seconds] lr:1.00e-01 | train, 8.22e-03, 99.95, 100.00 |  test, 5.2e-02, 98.35, 99.99
+Best Model: 98.35%	 99.99%
+[  6/35, 11 seconds] lr:1.00e-01 | train, 3.28e-02, 98.92, 99.98 |  test, 6.5e-02, 98.13, 99.97
+Best Model: 98.13%	 99.97%
+[  9/35, 7 seconds] lr:1.00e-01 | train, 9.97e-03, 99.68, 100.00 |  test, 7.7e-02, 97.90, 99.93
+Best Model: 98.25%	 99.96%
+[ 13/35, 5 seconds] lr:1.00e-01 | train, 7.88e-03, 99.95, 100.00 |  test, 5.3e-02, 98.32, 99.98
+Best Model: 98.35%	 99.99%
+[ 14/35, 5 seconds] lr:1.00e-01 | train, 7.73e-03, 99.96, 100.00 |  test, 4.9e-02, 98.47, 99.98
+Best Model: 98.47%	 99.98%
+[ 10/35, 8 seconds] lr:1.00e-01 | train, 9.50e-03, 99.70, 100.00 |  test, 6.7e-02, 98.23, 99.98
+Best Model: 98.25%	 99.96%
+[  7/35, 11 seconds] lr:1.00e-01 | train, 2.81e-02, 99.09, 99.99 |  test, 7.9e-02, 97.85, 99.95
+Best Model: 98.13%	 99.97%
+[ 15/35, 5 seconds] lr:1.00e-01 | train, 7.46e-03, 99.98, 100.00 |  test, 4.9e-02, 98.52, 100.00
+Best Model: 98.52%	 100.00%
+[ 11/35, 8 seconds] lr:1.00e-01 | train, 1.22e-02, 99.62, 100.00 |  test, 5.9e-02, 98.35, 99.97
+Best Model: 98.35%	 99.97%
+[ 16/35, 5 seconds] lr:1.00e-01 | train, 7.68e-03, 99.96, 100.00 |  test, 4.8e-02, 98.47, 100.00
+Best Model: 98.52%	 100.00%
+[  8/35, 11 seconds] lr:1.00e-01 | train, 2.50e-02, 99.21, 99.99 |  test, 7.7e-02, 98.02, 99.92
+Best Model: 98.13%	 99.97%
+[ 17/35, 5 seconds] lr:1.00e-01 | train, 7.36e-03, 99.97, 100.00 |  test, 4.9e-02, 98.42, 99.98
+Best Model: 98.52%	 100.00%
+[ 12/35, 7 seconds] lr:1.00e-01 | train, 9.37e-03, 99.69, 100.00 |  test, 6.3e-02, 98.25, 100.00
+Best Model: 98.35%	 99.97%
+[ 18/35, 5 seconds] lr:1.00e-01 | train, 7.58e-03, 99.97, 100.00 |  test, 5.1e-02, 98.31, 99.96
+Best Model: 98.52%	 100.00%
+[  9/35, 11 seconds] lr:1.00e-01 | train, 2.30e-02, 99.26, 99.99 |  test, 6.6e-02, 98.13, 99.95
+Best Model: 98.13%	 99.97%
+[ 13/35, 8 seconds] lr:1.00e-01 | train, 9.21e-03, 99.72, 100.00 |  test, 5.7e-02, 98.44, 99.99
+Best Model: 98.44%	 99.99%
+[ 19/35, 5 seconds] lr:1.00e-01 | train, 7.54e-03, 99.97, 100.00 |  test, 5.0e-02, 98.43, 100.00
+Best Model: 98.52%	 100.00%
+[ 20/35, 5 seconds] lr:1.00e-02 | train, 5.83e-03, 100.00, 100.00 |  test, 4.7e-02, 98.52, 100.00
+Best Model: 98.52%	 100.00%
+[ 14/35, 8 seconds] lr:1.00e-01 | train, 7.41e-03, 99.79, 100.00 |  test, 6.5e-02, 98.11, 100.00
+Best Model: 98.44%	 99.99%
+[ 10/35, 11 seconds] lr:1.00e-01 | train, 1.98e-02, 99.37, 100.00 |  test, 8.1e-02, 97.90, 99.92
+Best Model: 98.13%	 99.97%
+[ 21/35, 5 seconds] lr:1.00e-02 | train, 5.36e-03, 100.00, 100.00 |  test, 4.7e-02, 98.48, 100.00
+Best Model: 98.52%	 100.00%
+[ 15/35, 8 seconds] lr:1.00e-01 | train, 9.23e-03, 99.71, 100.00 |  test, 5.9e-02, 98.32, 100.00
+Best Model: 98.44%	 99.99%
+[ 22/35, 5 seconds] lr:1.00e-02 | train, 5.26e-03, 100.00, 100.00 |  test, 4.7e-02, 98.45, 100.00
+Best Model: 98.52%	 100.00%
+[ 11/35, 11 seconds] lr:1.00e-01 | train, 1.82e-02, 99.42, 100.00 |  test, 6.8e-02, 98.24, 99.95
+Best Model: 98.24%	 99.95%
+[ 23/35, 5 seconds] lr:1.00e-02 | train, 5.23e-03, 100.00, 100.00 |  test, 4.7e-02, 98.46, 100.00
+Best Model: 98.52%	 100.00%
+[ 16/35, 7 seconds] lr:1.00e-01 | train, 5.88e-03, 99.82, 100.00 |  test, 7.3e-02, 97.97, 99.98
+Best Model: 98.44%	 99.99%
+[ 24/35, 5 seconds] lr:1.00e-02 | train, 5.23e-03, 100.00, 100.00 |  test, 4.7e-02, 98.48, 100.00
+Best Model: 98.52%	 100.00%
+[ 17/35, 8 seconds] lr:1.00e-01 | train, 1.04e-02, 99.67, 100.00 |  test, 6.7e-02, 98.00, 99.98
+Best Model: 98.44%	 99.99%
+[ 12/35, 11 seconds] lr:1.00e-01 | train, 1.66e-02, 99.45, 99.99 |  test, 7.6e-02, 98.16, 99.95
+Best Model: 98.24%	 99.95%
+[ 25/35, 5 seconds] lr:1.00e-02 | train, 5.24e-03, 100.00, 100.00 |  test, 4.7e-02, 98.49, 100.00
+Best Model: 98.52%	 100.00%
+[ 18/35, 8 seconds] lr:1.00e-01 | train, 1.34e-02, 99.58, 100.00 |  test, 6.6e-02, 98.10, 99.99
+Best Model: 98.44%	 99.99%
+[ 26/35, 5 seconds] lr:1.00e-02 | train, 5.26e-03, 100.00, 100.00 |  test, 4.7e-02, 98.47, 100.00
+Best Model: 98.52%	 100.00%
+[ 13/35, 11 seconds] lr:1.00e-01 | train, 1.77e-02, 99.45, 99.99 |  test, 7.6e-02, 97.91, 99.92
+Best Model: 98.24%	 99.95%
+[ 27/35, 5 seconds] lr:1.00e-02 | train, 5.28e-03, 100.00, 100.00 |  test, 4.7e-02, 98.50, 100.00
+Best Model: 98.52%	 100.00%
+[ 19/35, 8 seconds] lr:1.00e-01 | train, 8.79e-03, 99.74, 100.00 |  test, 5.3e-02, 98.56, 100.00
+Best Model: 98.56%	 100.00%
+[ 28/35, 5 seconds] lr:1.00e-02 | train, 5.31e-03, 100.00, 100.00 |  test, 4.7e-02, 98.47, 100.00
+Best Model: 98.52%	 100.00%
+[ 14/35, 11 seconds] lr:1.00e-01 | train, 1.91e-02, 99.40, 100.00 |  test, 6.9e-02, 98.00, 99.96
+Best Model: 98.24%	 99.95%
+[ 20/35, 8 seconds] lr:1.00e-02 | train, 2.03e-03, 99.96, 100.00 |  test, 4.4e-02, 98.77, 100.00
+Best Model: 98.77%	 100.00%
+[ 29/35, 5 seconds] lr:1.00e-02 | train, 5.32e-03, 100.00, 100.00 |  test, 4.7e-02, 98.46, 100.00
+Best Model: 98.52%	 100.00%
+[ 30/35, 6 seconds] lr:1.00e-03 | train, 5.21e-03, 100.00, 100.00 |  test, 4.7e-02, 98.48, 100.00
+Best Model: 98.52%	 100.00%
+[ 21/35, 8 seconds] lr:1.00e-02 | train, 9.02e-04, 100.00, 100.00 |  test, 4.3e-02, 98.82, 100.00
+Best Model: 98.82%	 100.00%
+[ 15/35, 11 seconds] lr:1.00e-01 | train, 1.81e-02, 99.44, 100.00 |  test, 6.8e-02, 98.30, 99.97
+Best Model: 98.30%	 99.97%
+[ 31/35, 6 seconds] lr:1.00e-03 | train, 5.20e-03, 100.00, 100.00 |  test, 4.7e-02, 98.48, 100.00
+Best Model: 98.52%	 100.00%
+[ 22/35, 8 seconds] lr:1.00e-02 | train, 7.24e-04, 100.00, 100.00 |  test, 4.3e-02, 98.84, 100.00
+Best Model: 98.84%	 100.00%
+[ 32/35, 5 seconds] lr:1.00e-03 | train, 5.20e-03, 100.00, 100.00 |  test, 4.7e-02, 98.48, 100.00
+Best Model: 98.52%	 100.00%
+[ 16/35, 11 seconds] lr:1.00e-01 | train, 1.68e-02, 99.48, 100.00 |  test, 7.8e-02, 98.01, 99.93
+Best Model: 98.30%	 99.97%
+[ 33/35, 5 seconds] lr:1.00e-03 | train, 5.20e-03, 100.00, 100.00 |  test, 4.7e-02, 98.48, 100.00
+Best Model: 98.52%	 100.00%
+[ 23/35, 7 seconds] lr:1.00e-02 | train, 6.45e-04, 100.00, 100.00 |  test, 4.3e-02, 98.81, 100.00
+Best Model: 98.84%	 100.00%
+[ 34/35, 5 seconds] lr:1.00e-03 | train, 5.20e-03, 100.00, 100.00 |  test, 4.7e-02, 98.48, 100.00
+Best Model: 98.52%	 100.00%
+[ 24/35, 8 seconds] lr:1.00e-02 | train, 5.95e-04, 100.00, 100.00 |  test, 4.3e-02, 98.84, 100.00
+Best Model: 98.84%	 100.00%
+[ 17/35, 11 seconds] lr:1.00e-01 | train, 1.37e-02, 99.55, 100.00 |  test, 7.0e-02, 98.14, 99.92
+Best Model: 98.30%	 99.97%
+[ 35/35, 5 seconds] lr:1.00e-03 | train, 5.21e-03, 100.00, 100.00 |  test, 4.7e-02, 98.48, 100.00
+Best Model: 98.52%	 100.00%
+[ 25/35, 7 seconds] lr:1.00e-02 | train, 5.60e-04, 100.00, 100.00 |  test, 4.3e-02, 98.86, 100.00
+Best Model: 98.86%	 100.00%
+[ 18/35, 10 seconds] lr:1.00e-01 | train, 1.37e-02, 99.58, 100.00 |  test, 8.1e-02, 98.07, 99.92
+Best Model: 98.30%	 99.97%
+[ 26/35, 7 seconds] lr:1.00e-02 | train, 5.40e-04, 100.00, 100.00 |  test, 4.2e-02, 98.85, 100.00
+Best Model: 98.86%	 100.00%
+[ 19/35, 9 seconds] lr:1.00e-01 | train, 1.61e-02, 99.51, 100.00 |  test, 7.7e-02, 97.94, 99.90
+Best Model: 98.30%	 99.97%
+[ 27/35, 7 seconds] lr:1.00e-02 | train, 5.22e-04, 100.00, 100.00 |  test, 4.2e-02, 98.86, 100.00
+Best Model: 98.86%	 100.00%
+[ 28/35, 7 seconds] lr:1.00e-02 | train, 5.13e-04, 100.00, 100.00 |  test, 4.2e-02, 98.87, 100.00
+Best Model: 98.87%	 100.00%
+[ 20/35, 9 seconds] lr:1.00e-02 | train, 3.98e-03, 99.90, 100.00 |  test, 5.4e-02, 98.65, 99.95
+Best Model: 98.65%	 99.95%
+[ 29/35, 7 seconds] lr:1.00e-02 | train, 5.05e-04, 100.00, 100.00 |  test, 4.2e-02, 98.87, 100.00
+Best Model: 98.87%	 100.00%
+[ 21/35, 9 seconds] lr:1.00e-02 | train, 1.24e-03, 99.99, 100.00 |  test, 5.4e-02, 98.67, 99.94
+Best Model: 98.67%	 99.94%
+[ 30/35, 7 seconds] lr:1.00e-03 | train, 4.90e-04, 100.00, 100.00 |  test, 4.2e-02, 98.86, 100.00
+Best Model: 98.87%	 100.00%
+[ 22/35, 9 seconds] lr:1.00e-02 | train, 8.48e-04, 99.99, 100.00 |  test, 5.4e-02, 98.66, 99.94
+Best Model: 98.67%	 99.94%
+[ 31/35, 7 seconds] lr:1.00e-03 | train, 4.89e-04, 100.00, 100.00 |  test, 4.2e-02, 98.86, 100.00
+Best Model: 98.87%	 100.00%
+[ 32/35, 7 seconds] lr:1.00e-03 | train, 4.89e-04, 100.00, 100.00 |  test, 4.2e-02, 98.86, 100.00
+Best Model: 98.87%	 100.00%
+[ 23/35, 9 seconds] lr:1.00e-02 | train, 6.82e-04, 100.00, 100.00 |  test, 5.5e-02, 98.70, 99.94
+Best Model: 98.70%	 99.94%
+[ 33/35, 7 seconds] lr:1.00e-03 | train, 4.88e-04, 100.00, 100.00 |  test, 4.2e-02, 98.86, 100.00
+Best Model: 98.87%	 100.00%
+[ 24/35, 10 seconds] lr:1.00e-02 | train, 5.90e-04, 100.00, 100.00 |  test, 5.5e-02, 98.69, 99.95
+Best Model: 98.70%	 99.94%
+[ 34/35, 7 seconds] lr:1.00e-03 | train, 4.88e-04, 100.00, 100.00 |  test, 4.2e-02, 98.86, 100.00
+Best Model: 98.87%	 100.00%
+[ 35/35, 7 seconds] lr:1.00e-03 | train, 4.88e-04, 100.00, 100.00 |  test, 4.2e-02, 98.86, 100.00
+Best Model: 98.87%	 100.00%
+[ 25/35, 9 seconds] lr:1.00e-02 | train, 5.28e-04, 100.00, 100.00 |  test, 5.5e-02, 98.73, 99.95
+Best Model: 98.73%	 99.95%
+[ 26/35, 6 seconds] lr:1.00e-02 | train, 4.85e-04, 100.00, 100.00 |  test, 5.5e-02, 98.72, 99.95
+Best Model: 98.73%	 99.95%
+[ 27/35, 6 seconds] lr:1.00e-02 | train, 4.56e-04, 100.00, 100.00 |  test, 5.5e-02, 98.69, 99.95
+Best Model: 98.73%	 99.95%
+[ 28/35, 6 seconds] lr:1.00e-02 | train, 4.33e-04, 100.00, 100.00 |  test, 5.5e-02, 98.69, 99.95
+Best Model: 98.73%	 99.95%
+[ 29/35, 6 seconds] lr:1.00e-02 | train, 4.15e-04, 100.00, 100.00 |  test, 5.5e-02, 98.68, 99.95
+Best Model: 98.73%	 99.95%
+[ 30/35, 6 seconds] lr:1.00e-03 | train, 3.98e-04, 100.00, 100.00 |  test, 5.5e-02, 98.69, 99.95
+Best Model: 98.73%	 99.95%
+[ 31/35, 6 seconds] lr:1.00e-03 | train, 3.96e-04, 100.00, 100.00 |  test, 5.5e-02, 98.70, 99.95
+Best Model: 98.73%	 99.95%
+[ 32/35, 6 seconds] lr:1.00e-03 | train, 3.95e-04, 100.00, 100.00 |  test, 5.5e-02, 98.70, 99.95
+Best Model: 98.73%	 99.95%
+[ 33/35, 6 seconds] lr:1.00e-03 | train, 3.94e-04, 100.00, 100.00 |  test, 5.5e-02, 98.70, 99.95
+Best Model: 98.73%	 99.95%
+[ 34/35, 6 seconds] lr:1.00e-03 | train, 3.94e-04, 100.00, 100.00 |  test, 5.5e-02, 98.70, 99.95
+Best Model: 98.73%	 99.95%
+[ 35/35, 6 seconds] lr:1.00e-03 | train, 3.92e-04, 100.00, 100.00 |  test, 5.5e-02, 98.71, 99.95
+Best Model: 98.73%	 99.95%
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=1, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=100, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_1_width_100
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 100)
+    (1): Linear (100 -> 10)
+  )
+)
+Namespace(arch='fnn', batch_size=128, dataroot='/home/leiwu/data/', dataset='mnist', decay=0.0001, depth=1, drop=[20, 30], gpuid='1', learning_rate=0.1, nepochs=35, ngpu=1, resume='None', savepath='checkpoints/fnn-mnist.pkl', seed=123, shortcutType='A', width=10000, workers=1)
+--> GPU 1 are selected <--
+Files already downloaded
+fnn_depth_1_width_10000
+FNN (
+  (fc): ModuleList (
+    (0): Linear (784 -> 10000)
+    (1): Linear (10000 -> 10)
+  )
+)
+[  1/35, 5 seconds] lr:1.00e-01 | train, 2.52e-01, 92.56, 99.45 |  test, 1.3e-01, 96.19, 99.90
+Best Model: 96.19%	 99.90%
+[  1/35, 5 seconds] lr:1.00e-01 | train, 3.13e-01, 94.30, 99.23 |  test, 9.7e-02, 97.04, 99.94
+Best Model: 97.04%	 99.94%
+[  2/35, 5 seconds] lr:1.00e-01 | train, 1.09e-01, 96.81, 99.93 |  test, 1.1e-01, 96.73, 99.90
+Best Model: 96.73%	 99.90%
+[  2/35, 5 seconds] lr:1.00e-01 | train, 6.38e-02, 98.12, 99.97 |  test, 7.2e-02, 97.79, 99.97
+Best Model: 97.79%	 99.97%
+[  3/35, 5 seconds] lr:1.00e-01 | train, 8.05e-02, 97.55, 99.97 |  test, 9.1e-02, 97.15, 99.96
+Best Model: 97.15%	 99.96%
+[  3/35, 5 seconds] lr:1.00e-01 | train, 3.72e-02, 98.99, 99.98 |  test, 6.5e-02, 97.95, 99.98
+Best Model: 97.95%	 99.98%
+[  4/35, 5 seconds] lr:1.00e-01 | train, 6.36e-02, 98.06, 99.98 |  test, 8.2e-02, 97.41, 99.97
+Best Model: 97.41%	 99.97%
+[  4/35, 5 seconds] lr:1.00e-01 | train, 2.43e-02, 99.43, 100.00 |  test, 6.0e-02, 98.15, 99.98
+Best Model: 98.15%	 99.98%
+[  5/35, 5 seconds] lr:1.00e-01 | train, 5.28e-02, 98.39, 99.99 |  test, 7.5e-02, 97.68, 99.98
+Best Model: 97.68%	 99.98%
+[  5/35, 5 seconds] lr:1.00e-01 | train, 1.69e-02, 99.70, 100.00 |  test, 5.6e-02, 98.26, 99.98
+Best Model: 98.26%	 99.98%
+[  6/35, 5 seconds] lr:1.00e-01 | train, 4.58e-02, 98.56, 99.99 |  test, 7.6e-02, 97.68, 99.97
+Best Model: 97.68%	 99.98%
+[  6/35, 5 seconds] lr:1.00e-01 | train, 1.26e-02, 99.84, 100.00 |  test, 5.8e-02, 98.19, 99.98
+Best Model: 98.26%	 99.98%
+[  7/35, 5 seconds] lr:1.00e-01 | train, 3.84e-02, 98.87, 99.99 |  test, 8.1e-02, 97.59, 99.94
+Best Model: 97.68%	 99.98%
+[  7/35, 5 seconds] lr:1.00e-01 | train, 1.06e-02, 99.88, 100.00 |  test, 5.6e-02, 98.33, 99.97
+Best Model: 98.33%	 99.97%
+[  8/35, 5 seconds] lr:1.00e-01 | train, 3.25e-02, 99.05, 99.99 |  test, 7.1e-02, 97.77, 99.97
+Best Model: 97.77%	 99.97%
+[  8/35, 5 seconds] lr:1.00e-01 | train, 8.80e-03, 99.95, 100.00 |  test, 5.5e-02, 98.37, 99.99
+Best Model: 98.37%	 99.99%
+[  9/35, 5 seconds] lr:1.00e-01 | train, 2.89e-02, 99.13, 100.00 |  test, 7.2e-02, 97.85, 99.96
+Best Model: 97.85%	 99.96%
+[  9/35, 5 seconds] lr:1.00e-01 | train, 7.90e-03, 99.96, 100.00 |  test, 5.4e-02, 98.43, 99.98
+Best Model: 98.43%	 99.98%
+[ 10/35, 5 seconds] lr:1.00e-01 | train, 2.63e-02, 99.22, 100.00 |  test, 7.0e-02, 97.89, 99.99
+Best Model: 97.89%	 99.99%
+[ 10/35, 5 seconds] lr:1.00e-01 | train, 7.90e-03, 99.97, 100.00 |  test, 5.2e-02, 98.34, 99.97
+Best Model: 98.43%	 99.98%
+[ 11/35, 5 seconds] lr:1.00e-01 | train, 2.32e-02, 99.36, 100.00 |  test, 6.9e-02, 97.87, 99.98
+Best Model: 97.89%	 99.99%
+[ 11/35, 5 seconds] lr:1.00e-01 | train, 7.27e-03, 99.99, 100.00 |  test, 5.1e-02, 98.40, 99.98
+Best Model: 98.43%	 99.98%
+[ 12/35, 5 seconds] lr:1.00e-01 | train, 2.07e-02, 99.43, 100.00 |  test, 7.1e-02, 97.78, 99.98
+Best Model: 97.89%	 99.99%
+[ 12/35, 5 seconds] lr:1.00e-01 | train, 7.18e-03, 99.98, 100.00 |  test, 5.2e-02, 98.37, 99.98
+Best Model: 98.43%	 99.98%
+[ 13/35, 5 seconds] lr:1.00e-01 | train, 1.82e-02, 99.58, 100.00 |  test, 7.3e-02, 97.88, 99.97
+Best Model: 97.89%	 99.99%
+[ 13/35, 5 seconds] lr:1.00e-01 | train, 7.19e-03, 99.99, 100.00 |  test, 5.1e-02, 98.45, 99.99
+Best Model: 98.45%	 99.99%
+[ 14/35, 5 seconds] lr:1.00e-01 | train, 1.67e-02, 99.61, 100.00 |  test, 6.9e-02, 97.96, 99.97
+Best Model: 97.96%	 99.97%
+[ 14/35, 5 seconds] lr:1.00e-01 | train, 7.09e-03, 99.99, 100.00 |  test, 5.0e-02, 98.50, 99.99
+Best Model: 98.50%	 99.99%
+[ 15/35, 5 seconds] lr:1.00e-01 | train, 1.69e-02, 99.63, 100.00 |  test, 7.1e-02, 97.86, 99.99
+Best Model: 97.96%	 99.97%
+[ 15/35, 5 seconds] lr:1.00e-01 | train, 6.97e-03, 99.99, 100.00 |  test, 5.2e-02, 98.41, 99.98
+Best Model: 98.50%	 99.99%
+[ 16/35, 5 seconds] lr:1.00e-01 | train, 1.45e-02, 99.70, 100.00 |  test, 7.0e-02, 98.02, 99.99
+Best Model: 98.02%	 99.99%
+[ 16/35, 5 seconds] lr:1.00e-01 | train, 7.09e-03, 99.99, 100.00 |  test, 4.9e-02, 98.44, 99.99
+Best Model: 98.50%	 99.99%
+[ 17/35, 5 seconds] lr:1.00e-01 | train, 1.36e-02, 99.74, 100.00 |  test, 6.6e-02, 97.96, 99.99
+Best Model: 98.02%	 99.99%
+[ 17/35, 5 seconds] lr:1.00e-01 | train, 7.07e-03, 99.99, 100.00 |  test, 5.0e-02, 98.46, 99.98
+Best Model: 98.50%	 99.99%
+[ 18/35, 5 seconds] lr:1.00e-01 | train, 1.34e-02, 99.75, 100.00 |  test, 6.3e-02, 97.98, 99.97
+Best Model: 98.02%	 99.99%
+[ 18/35, 5 seconds] lr:1.00e-01 | train, 7.08e-03, 99.99, 100.00 |  test, 4.9e-02, 98.47, 99.99
+Best Model: 98.50%	 99.99%
+[ 19/35, 5 seconds] lr:1.00e-01 | train, 1.25e-02, 99.77, 100.00 |  test, 6.3e-02, 98.11, 99.97
+Best Model: 98.11%	 99.97%
+[ 19/35, 5 seconds] lr:1.00e-01 | train, 7.26e-03, 99.98, 100.00 |  test, 5.2e-02, 98.30, 100.00
+Best Model: 98.50%	 99.99%
+[ 20/35, 5 seconds] lr:1.00e-02 | train, 7.68e-03, 99.94, 100.00 |  test, 5.8e-02, 98.14, 99.98
+Best Model: 98.14%	 99.98%
+[ 20/35, 5 seconds] lr:1.00e-02 | train, 5.81e-03, 100.00, 100.00 |  test, 4.8e-02, 98.53, 99.98
+Best Model: 98.53%	 99.98%
+[ 21/35, 5 seconds] lr:1.00e-02 | train, 6.66e-03, 99.97, 100.00 |  test, 5.8e-02, 98.20, 99.98
+Best Model: 98.20%	 99.98%
+[ 21/35, 5 seconds] lr:1.00e-02 | train, 5.41e-03, 100.00, 100.00 |  test, 4.8e-02, 98.53, 99.99
+Best Model: 98.53%	 99.98%
+[ 22/35, 5 seconds] lr:1.00e-02 | train, 6.47e-03, 99.97, 100.00 |  test, 5.8e-02, 98.21, 99.97
+Best Model: 98.21%	 99.97%
+[ 22/35, 5 seconds] lr:1.00e-02 | train, 5.33e-03, 100.00, 100.00 |  test, 4.8e-02, 98.49, 99.98
+Best Model: 98.53%	 99.98%
+[ 23/35, 5 seconds] lr:1.00e-02 | train, 6.38e-03, 99.97, 100.00 |  test, 5.8e-02, 98.20, 99.98
+Best Model: 98.21%	 99.97%
+[ 23/35, 5 seconds] lr:1.00e-02 | train, 5.32e-03, 100.00, 100.00 |  test, 4.8e-02, 98.55, 99.99
+Best Model: 98.55%	 99.99%
+[ 24/35, 5 seconds] lr:1.00e-02 | train, 6.32e-03, 99.98, 100.00 |  test, 5.8e-02, 98.18, 99.98
+Best Model: 98.21%	 99.97%
+[ 24/35, 5 seconds] lr:1.00e-02 | train, 5.32e-03, 100.00, 100.00 |  test, 4.8e-02, 98.53, 99.99
+Best Model: 98.55%	 99.99%
+[ 25/35, 5 seconds] lr:1.00e-02 | train, 6.28e-03, 99.98, 100.00 |  test, 5.8e-02, 98.18, 99.97
+Best Model: 98.21%	 99.97%
+[ 25/35, 5 seconds] lr:1.00e-02 | train, 5.33e-03, 100.00, 100.00 |  test, 4.8e-02, 98.53, 99.98
+Best Model: 98.55%	 99.99%
+[ 26/35, 5 seconds] lr:1.00e-02 | train, 6.27e-03, 99.98, 100.00 |  test, 5.8e-02, 98.21, 99.98
+Best Model: 98.21%	 99.97%
+[ 26/35, 4 seconds] lr:1.00e-02 | train, 5.35e-03, 100.00, 100.00 |  test, 4.8e-02, 98.54, 99.99
+Best Model: 98.55%	 99.99%
+[ 27/35, 5 seconds] lr:1.00e-02 | train, 6.24e-03, 99.98, 100.00 |  test, 5.7e-02, 98.24, 99.98
+Best Model: 98.24%	 99.98%
+[ 27/35, 5 seconds] lr:1.00e-02 | train, 5.37e-03, 100.00, 100.00 |  test, 4.8e-02, 98.54, 99.98
+Best Model: 98.55%	 99.99%
+[ 28/35, 5 seconds] lr:1.00e-02 | train, 6.25e-03, 99.99, 100.00 |  test, 5.8e-02, 98.16, 99.97
+Best Model: 98.24%	 99.98%
+[ 28/35, 5 seconds] lr:1.00e-02 | train, 5.39e-03, 100.00, 100.00 |  test, 4.8e-02, 98.55, 99.98
+Best Model: 98.55%	 99.99%
+[ 29/35, 5 seconds] lr:1.00e-02 | train, 6.26e-03, 99.98, 100.00 |  test, 5.8e-02, 98.21, 99.97
+Best Model: 98.24%	 99.98%
+[ 29/35, 5 seconds] lr:1.00e-02 | train, 5.41e-03, 100.00, 100.00 |  test, 4.8e-02, 98.56, 99.99
+Best Model: 98.56%	 99.99%
+[ 30/35, 5 seconds] lr:1.00e-03 | train, 6.05e-03, 99.99, 100.00 |  test, 5.7e-02, 98.22, 99.97
+Best Model: 98.24%	 99.98%
+[ 30/35, 5 seconds] lr:1.00e-03 | train, 5.31e-03, 100.00, 100.00 |  test, 4.8e-02, 98.56, 99.99
+Best Model: 98.56%	 99.99%
+[ 31/35, 5 seconds] lr:1.00e-03 | train, 6.04e-03, 99.99, 100.00 |  test, 5.7e-02, 98.21, 99.97
+Best Model: 98.24%	 99.98%
+[ 31/35, 5 seconds] lr:1.00e-03 | train, 5.30e-03, 100.00, 100.00 |  test, 4.8e-02, 98.55, 99.99
+Best Model: 98.56%	 99.99%
+[ 32/35, 5 seconds] lr:1.00e-03 | train, 6.04e-03, 99.99, 100.00 |  test, 5.7e-02, 98.20, 99.97
+Best Model: 98.24%	 99.98%
+[ 32/35, 5 seconds] lr:1.00e-03 | train, 5.30e-03, 100.00, 100.00 |  test, 4.8e-02, 98.56, 99.99
+Best Model: 98.56%	 99.99%
+[ 33/35, 5 seconds] lr:1.00e-03 | train, 6.04e-03, 99.99, 100.00 |  test, 5.7e-02, 98.19, 99.97
+Best Model: 98.24%	 99.98%
+[ 33/35, 5 seconds] lr:1.00e-03 | train, 5.30e-03, 100.00, 100.00 |  test, 4.8e-02, 98.55, 99.99
+Best Model: 98.56%	 99.99%
+[ 34/35, 5 seconds] lr:1.00e-03 | train, 6.04e-03, 99.99, 100.00 |  test, 5.7e-02, 98.21, 99.97
+Best Model: 98.24%	 99.98%
+[ 34/35, 5 seconds] lr:1.00e-03 | train, 5.30e-03, 100.00, 100.00 |  test, 4.8e-02, 98.56, 99.99
+Best Model: 98.56%	 99.99%
+[ 35/35, 5 seconds] lr:1.00e-03 | train, 6.04e-03, 99.99, 100.00 |  test, 5.7e-02, 98.20, 99.97
+Best Model: 98.24%	 99.98%
+[ 35/35, 5 seconds] lr:1.00e-03 | train, 5.30e-03, 100.00, 100.00 |  test, 4.8e-02, 98.56, 99.99
+Best Model: 98.56%	 99.99%
